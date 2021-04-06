@@ -1,1 +1,1 @@
-# android-demos
+Repo for sample demos
