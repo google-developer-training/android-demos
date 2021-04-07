@@ -23,27 +23,12 @@
     android:layout_height="match_parent"
     tools:context="com.android.samples.donuttracker.MainActivity">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        app:elevation="0dp"
-        app:menu="@menu/nav_drawer_menu" />
-
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:layout_toEndOf="@id/nav_view"
-        android:background="?android:attr/listDivider" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
-        android:layout_toEndOf="@id/nav_view"
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
 
     <androidx.fragment.app.FragmentContainerView
@@ -53,7 +38,6 @@
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
         app:defaultNavHost="true"
-        android:layout_toEndOf="@id/nav_view"
         app:navGraph="@navigation/nav_graph" />
 
 </RelativeLayout>

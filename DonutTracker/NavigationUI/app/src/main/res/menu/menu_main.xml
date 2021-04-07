@@ -19,7 +19,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.android.samples.donuttracker.MainActivity">
     <item
-        android:id="@+id/selectionFragment"
+        android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
