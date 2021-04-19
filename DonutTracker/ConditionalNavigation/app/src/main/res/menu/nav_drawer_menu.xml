@@ -14,9 +14,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
-    <color name="background_primary">#FBFBFB</color>
-</resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/primary">
+        <item
+            android:id="@id/donutList"
+            android:icon="@drawable/donut_with_sprinkles"
+            android:title="@string/donut_name" />
+        <item
+            android:id="@id/coffeeList"
+            android:icon="@drawable/coffee_cup"
+            android:title="@string/coffee_name" />
+    </group>
+    <item
+        android:id="@+id/selectionFragment"
+        android:title="@string/action_settings" />
+</menu>
