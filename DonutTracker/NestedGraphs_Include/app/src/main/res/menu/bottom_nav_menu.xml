@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/donutList"
+        android:icon="@drawable/donut_with_sprinkles"
+        android:title="@string/donut_name" />
+    <item
+        android:id="@id/coffeeGraph"
+        android:icon="@drawable/coffee_cup"
+        android:title="@string/coffee_name" />
+</menu>
