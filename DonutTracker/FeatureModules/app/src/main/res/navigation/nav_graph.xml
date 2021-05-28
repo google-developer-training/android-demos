@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/donutList"
+    app:progressDestination="@+id/progressFragment">
+
+    <fragment
+        android:id="@+id/donutList"
+        android:name="com.android.samples.donuttracker.donut.DonutList"
+        android:label="@string/donut_list" >
+        <action
+            android:id="@+id/action_donutList_to_donutEntryDialogFragment"
+            app:destination="@id/donutEntryDialogFragment" />
+        <action
+            android:id="@+id/action_donutList_to_selectionFragment"
+            app:destination="@id/selectionFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/donutEntryDialogFragment"
+        android:name="com.android.samples.donuttracker.donut.DonutEntryDialogFragment"
+        android:label="DonutEntryDialogFragment">
+        <deepLink app:uri="myapp://navdonutcreator.com/donutcreator" />
+        <argument
+            android:name="itemId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </dialog>
+    <fragment
+        android:id="@+id/selectionFragment"
+        android:name="com.android.samples.donuttracker.setup.SelectionFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_selection" >
+        <action
+            android:id="@+id/action_selectionFragment_to_donutList"
+            app:destination="@id/donutList" />
+    </fragment>
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.android.samples.donuttracker.ProgressFragment"
+        android:label="ProgressFragment" />
+    <include-dynamic
+        android:id="@+id/coffeeGraph"
+        app:moduleName="coffee"
+        app:graphResName="coffee_graph"/>
+</navigation>
