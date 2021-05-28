@@ -1,0 +1,4 @@
+include ':coffee'
+include ':core'
+rootProject.name='Donut Tracker'
+include ':app'
